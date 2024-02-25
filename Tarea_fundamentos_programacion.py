@@ -1,27 +1,28 @@
 #Búsqueda y Ordenación en Arreglos Multidimensionales
-# Definir una matriz bidimensional (3x3) con valores numéricos
-matriz = [
-    [11, 12, 13],
-    [14, 15, 16],
-    [17, 18, 19]
+# En este primer ejercicio utilizaremos una matriz bidimensional (3x3) con valores numéricos
+a = [
+    [10, 11, 12],
+    [13,14, 15],
+    [16, 17, 18]
 ]
 
-# Función para buscar un valor específico en la matriz
-def buscar_valor(matriz, valor):
-    for i in range(len(matriz)):
-        for j in range(len(matriz[0])):
-            if matriz[i][j] == valor:
+# Función de búsqueda del valor
+def buscar_valor(a, valor):
+    for i in range(len(a)):
+        for j in range(len(a[0])):
+            if a[i][j] == valor:
                 return True, i, j
     return False, None, None
 
 # Valor a buscar
-valor_a_buscar = 15
+valor_a_buscar = 10
 
-# Realizar la búsqueda
-encontrado, fila, columna = buscar_valor(matriz, valor_a_buscar)
+# Iniciamos la busqueda
+encontrado, fila, columna = buscar_valor(a,valor_a_buscar)
 
-# Mostrar el resultado
+# Imprimimos el resultado
 if encontrado:
-    print(f"El valor {valor_a_buscar} se encontró en la posición [{fila}][{columna}] de la matriz.")
+    print(f"El valor asignado {valor_a_buscar} se encuentra en la posición [{fila}][{columna}] de la matriz.")
+
 else:
-    print(f"El valor {valor_a_buscar} no se encontró en la matriz.")
+    print(f"El valor asignado {valor_a_buscar} no se encontró en la matriz.")
