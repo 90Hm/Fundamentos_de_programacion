@@ -2,11 +2,11 @@
 # En este primer ejercicio utilizaremos una matriz bidimensional (3x3) con valores numéricos
 a = [
     [10, 11, 12],
-    [13,14, 15],
+    [13, 14, 15],
     [16, 17, 18]
 ]
 
-# Función de búsqueda del valor
+#Función para buscar una numero específico
 def buscar_valor(a, valor):
     for i in range(len(a)):
         for j in range(len(a[0])):
@@ -14,8 +14,8 @@ def buscar_valor(a, valor):
                 return True, i, j
     return False, None, None
 
-# Valor a buscar
-valor_a_buscar = 10
+# Asignamos el numero o valor que deseamos buscar
+valor_a_buscar = 13
 
 # Iniciamos la busqueda
 encontrado, fila, columna = buscar_valor(a,valor_a_buscar)
