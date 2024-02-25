@@ -4,13 +4,13 @@ Asignacion_de_frutas = [
     ['durazno', 'kiwi', 'mango'],
     ['piña', 'fresa', 'sandía']
 ]
+
 def buscar_fruta(Asignacion_de_frutas, fruta):
     for fila in range(len(Asignacion_de_frutas)):
         for columna in range(len(Asignacion_de_frutas[0])):
             if Asignacion_de_frutas[fila][columna] == fruta:
                 return True, fila, columna
     return False, None, None
-
 
 #Agregamos el nombre de la fruta que deseamos buscar
 fruta_a_buscar = 'sandía'
